@@ -1,0 +1,19 @@
+[project]
+name = "pizzabot-backend"
+version = "0.1.0"
+description = "Pizza ordering chat backend"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic>=2",
+  "langchain",
+  "langchain-google-genai",
+  "langgraph",
+  "langsmith",
+  "chromadb",
+  "sentence-transformers",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["app/tests"]

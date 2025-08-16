@@ -1,0 +1,44 @@
+# Environment
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# FastAPI / local data
+*.log
+*.pid
+*.seed
+*.cover
+*.coverage
+*.egg-info/
+data/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Node.js / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+*.tsbuildinfo
