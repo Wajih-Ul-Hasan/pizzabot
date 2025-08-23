@@ -1,42 +1,166 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Modern PIZZABOT Styles */
+.pizza-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fffbe6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.pizza-header {
   text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background: linear-gradient(90deg, #ff9800 60%, #ffd600 100%);
+  color: #fff;
+  border-bottom: 2px solid #ffd600;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 60px;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtitle {
+  font-size: 1.1rem;
+  color: #fffde7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.pizza-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-.card {
-  padding: 2em;
+.chat-window {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
-.read-the-docs {
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.message.user .message-card {
+  background: #ffe0b2;
+  align-self: flex-end;
+}
+
+.message.bot .message-card {
+  background: #e1f5fe;
+  align-self: flex-start;
+}
+
+.message-card {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.chat-input-field {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ffd600;
+  font-size: 1rem;
+}
+
+.chat-send-btn {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-send-btn:disabled {
+  background: #ffe0b2;
   color: #888;
+  cursor: not-allowed;
+}
+
+.order-summary {
+  background: #fffde7;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.order-summary h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #ff9800;
+}
+
+.order-total {
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.order-suggestions {
+  font-size: 0.95rem;
+  color: #757575;
+  margin-top: 0.5rem;
+}
+
+.checkout-btn {
+  background: #388e3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #2e7031;
+}
+
+.pizza-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #ffd600;
+  color: #333;
+  font-size: 0.95rem;
+  border-top: 2px solid #ff9800;
+}
+
+@media (max-width: 600px) {
+  .pizza-main, .chat-window, .chat-input {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+  .order-summary {
+    padding: 0.5rem;
+  }
 }

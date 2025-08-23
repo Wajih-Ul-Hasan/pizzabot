@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 export default function MessageList({ items }) {
   return (
-    <div className="messages">
+    <ul className="message-list">
       {items.map((m, i) => (
-        <div key={i} className={`message ${m.role}`}>{m.content}</div>
+        <li key={i} className={`message ${m.role}`}>
+          <div className="message-card">{m.content}</div>
+        </li>
       ))}
-    </div>
-  )
+    </ul>
+  );
 }
