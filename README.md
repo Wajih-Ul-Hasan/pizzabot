@@ -71,7 +71,7 @@ ENV=dev
 HOST=0.0.0.0
 PORT=8000
 VECTORDB_DIR=./data/chroma
-FRONTEND_ORIGIN=http://localhost:5173
+FRONTEND_ORIGIN= http://localhost:5173
 
 🚀 Roadmap
 
